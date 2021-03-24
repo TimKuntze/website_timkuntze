@@ -53,3 +53,27 @@
         transform: translateY(0);
     }
 }
+
+.arrow-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: 30px;
+    color: rgb(206, 86, 86);
+    img {
+        width: 60px;
+        object-fit: contain;
+        animation: up-down 2.5s infinite ease-out;
+    }
+}
+
+@keyframes up-down {
+    from {
+        transform: translateY(10px);
+    }
+    to {
+        transform: translateY(-5px);
+    }
+}

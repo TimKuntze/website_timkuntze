@@ -5,18 +5,27 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SlideshowComponent } from './slideshow/slideshow.component';
 import { MenueComponent } from './menue/menue.component';
-import { TestComponent } from './test/test.component';
+import { ImprintComponent } from './imprint/imprint.component';
+import { DataProtectionComponent } from './data-protection/data-protection.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     SlideshowComponent,
     MenueComponent,
-    TestComponent
+    ImprintComponent,
+    DataProtectionComponent,
+    PortfolioComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

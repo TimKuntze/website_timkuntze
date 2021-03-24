@@ -1,0 +1,117 @@
+<div class="homepage-content">
+
+    <div class="headlines" id="aboutme">
+        <h1>About me</h1>
+    </div>
+
+    <div class="aboutme">
+        <div class="aboutme-img_logo-section">
+
+            <img src="assets/img/cv_picture.jpg">
+
+        </div>
+        <p>Hi, I'm <b>Tim</b> from Berlin! After nearly 10 years doing <b>Marketing for Amazon.de, ATOSS Software, shyftplan and others</b>, I started to learn to develop websites and apps in summer 2020. And yes, so much can be said about Corona on the
+            positive side: it really made one think about what you really want to do with your career! How I learned my skills in <b>HTML, CSS, JavaScript and AngularJS</b>? I started a developer course with the Munich-based <b><a href="https://developerakademie.com/">Developer Akademie</a></b>,
+            besides my full-time job as a Marketing Manager at shyftplan. And what can I say? It worked! Including a lot of ups and downs, help from my tutors, not being afraid to ask a lot of questions and plain commitment.</p>
+
+        <div class="skillsandcv">
+            <div class="skillset">
+                <h2>Skill set</h2>
+                <span>(Click bars for more info)</span>
+                <br><br>
+                <span>HTML</span>
+
+                <div (click)="popuphtml = true" class="skill-container">
+                    <div class="skills html-bar">
+                    </div>
+
+                </div>
+
+                <div class="overlay" *ngIf="popuphtml">
+                    <div class="popup">
+                        <h2>HTML</h2>
+                        <a class="close" (click)="popuphtml = false">&times;</a>
+                        <div class="content-html">
+                            Since my first job after my studies of business psychology as Marketing Manager at Amazon.de (ca. 2011), I was building small Landing Pages with the help of a basic knowledge and understanding of HTML and CSS. So before my adventure of joining the Developer
+                            Akademie, I had least some small foundation.
+                        </div>
+                    </div>
+                </div>
+                <span>CSS</span>
+
+                <div (click)="popupcss = true" class="skill-container">
+                    <div class="skills css-bar"></div>
+                </div>
+
+                <div class="overlay" *ngIf="popupcss">
+                    <div class="popup">
+                        <h2>CSS</h2>
+                        <a class="close" (click)="popupcss = false">&times;</a>
+                        <div class="content-css">
+                            As with HTML, my first experience with CSS was at my first job at Amazon.de. A bigger experience with CSS I gained in my second job at Netzathleten Media, where I was responsible for setting up and managing display and video ads on thousands of websites
+                            - of course a cleanly written CSS of our partner websites played a big role here (especially in regard of being responsive for different devices). If that was not the case, I was happy to help :). But since my days at Developer
+                            Akademie I learned a lot of extra tricks and knowledge, that would have helped me a lot in that job, which I just now realized.
+                        </div>
+                    </div>
+                </div>
+
+                <span>JavaScript</span>
+                <div (click)="popupjs = true" class="skill-container">
+                    <div class="skills js-bar"></div>
+                </div>
+
+
+                <div class="overlay" *ngIf="popupjs">
+                    <div class="popup">
+                        <h2>JavaScript</h2>
+                        <a class="close" (click)="popupjs = false">&times;</a>
+                        <div class="content-js">
+                            With JavaScript I had no experience whatsoever, except being the end-user, before joing the Developer Akademie. To be honest with you: when I first started to (try to) programm litte apps like a primitive QuizzApp and a little devilvery service app, I
+                            thought I will never learn it properly. But it is like learning a normal language. The more you try and the more you are confronted with it, there will come the time - sooner or later - where it makes "click". Of course I can't
+                            say that I'm a fluent or native speaker of JavaScript, yet. But I think I came pretty far since my start and I'm eager to reach my goals to be a natural speaker ;) - have a look at my portfolio!
+                        </div>
+                    </div>
+                </div>
+
+                <span>TypeScript/Angular</span>
+                <div (click)="popupangular = true" class="skill-container">
+                    <div class="skills angular-bar"></div>
+                </div>
+
+                <div class="overlay" *ngIf="popupangular">
+                    <div class="popup">
+                        <h2>Angular</h2>
+                        <a class="close" (click)="popupangular = false">&times;</a>
+                        <div class="content-angular">
+                            My first AngularJS project? You're looking at it, as I programmed it with Angular. Although it was not easy to go from plain JavaScript coding to Angular, because of some things that are different, I have to say that i makes programming much more effective
+                            and clear!
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="cv">
+                <h2>My CV as pdf</h2>
+
+                <a href="assets/downloads/pdf-example.pdf" download>
+
+                    <img class="cvimg" src="assets/img/cv-mockup.png">
+                    <img class="cvimg" src="assets/img/cv-mockup2.png"><br>Click here to download</a>
+            </div>
+        </div>
+    </div>
+    <div class="headlines">
+        <h1>Portfolio</h1>
+    </div>
+
+    <div class="portfolio">
+        <div class="ElPolloLoco">
+            <h2>Jump 'n' Run Game: "El Pollo Loco"</h2>
+            <p>This is a small <b>JavaScript-based</b> one-level <b>Jump 'n' Run</b> game named <b><i>"El Pollo Loco"</i></b>. In this game you play the Mexican "Pepe", trying his best to stop a small, but dreadful invasion of crazy chickens ;)</p>
+            <p>Of course nothing to spend a whole night with, but anyways...<b>give it a shot!</b></p>
+
+            <div class="laptop-mockup"><img src="assets/img/elpollo.png"> </div>
+        </div>
+    </div>
+</div>

@@ -9,7 +9,7 @@ export class SlideshowComponent implements OnInit {
 
   images = ['coding.jpg', 'laptop.jpeg', 'cv_picture.jpg'];
   headlines = [
-    'Bringing engineering to the next level',
+    'Software developer',
     'Graduate of Developer Akademie',
     'Hands-on mentality'
   ];

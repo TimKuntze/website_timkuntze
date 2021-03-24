@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-menue',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menue.component.scss']
 })
 export class MenueComponent implements OnInit {
-
+  @Input() darkMode = true;
   constructor() { }
 
   ngOnInit(): void {

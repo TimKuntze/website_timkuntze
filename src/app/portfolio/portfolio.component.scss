@@ -1,0 +1,208 @@
+.homepage-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.headlines {
+    border-bottom: 8px solid rgb(206, 86, 86);
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.portfolio {
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+    width: 70%;
+}
+
+.aboutme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    width: 70%;
+    img {
+        border-radius: 15px;
+        width: 200px;
+        margin-bottom: 32px;
+    }
+}
+
+.skillsandcv {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.skillset {
+    width: 35%;
+}
+
+.cv {
+    width: 35%;
+}
+
+
+/* Make sure that padding behaves as expected */
+
+* {
+    box-sizing: border-box
+}
+
+
+/* Container for skill bars */
+
+.skill-container {
+    width: 100%;
+    /* Full width */
+    background-color: #ddd;
+    /* Grey background */
+}
+
+.skills {
+    text-align: right;
+    /* Right-align text */
+    padding-top: 10px;
+    /* Add top padding */
+    padding-bottom: 10px;
+    /* Add bottom padding */
+    color: white;
+    /* White text color */
+    margin-bottom: 10px;
+}
+
+.html-bar {
+    width: 85%;
+    opacity: 0.5;
+    background-color: #4CAF50;
+    &:hover {
+        opacity: 1;
+    }
+}
+
+
+/* Green */
+
+.css-bar {
+    width: 85%;
+    opacity: 0.5;
+    background-color: #2196F3;
+    &:hover {
+        opacity: 1;
+    }
+}
+
+
+/* Blue */
+
+.js-bar {
+    width: 65%;
+    opacity: 0.5;
+    background-color: #f44336;
+    &:hover {
+        opacity: 1;
+    }
+}
+
+
+/* Red */
+
+.angular-bar {
+    width: 50%;
+    opacity: 0.5;
+    background-color: #808080;
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+}
+
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.popup .close:hover {
+    color: #06D85F;
+    cursor: pointer;
+}
+
+.popup .content-html {
+    max-height: 30%;
+    overflow: auto;
+}
+
+.popup .content-css {
+    max-height: 30%;
+    overflow: auto;
+}
+
+.popup .content-js {
+    max-height: 30%;
+    overflow: auto;
+}
+
+.popup .content-angular {
+    max-height: 30%;
+    overflow: auto;
+}
+
+@media screen and (max-width: 700px) {
+    .popup {
+        width: 70%;
+    }
+}
+
+.cvimg {
+    border: 1px solid black;
+}
+
+.laptop-mockup {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    img {
+        width: 40%;
+    }
+}
