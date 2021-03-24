@@ -10,6 +10,8 @@ import { DataProtectionComponent } from './data-protection/data-protection.compo
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material/material.module';
+
 
 
 @NgModule({
@@ -19,13 +21,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MenueComponent,
     ImprintComponent,
     DataProtectionComponent,
-    PortfolioComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

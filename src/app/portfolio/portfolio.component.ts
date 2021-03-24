@@ -10,6 +10,8 @@ export class PortfolioComponent implements OnInit {
   popupcss = false
   popupjs = false
   popupangular = false
+  popupgithub = false
+  popupscrum = false
   constructor() { }
 
   ngOnInit(): void {
