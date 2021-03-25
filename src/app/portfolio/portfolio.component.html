@@ -11,7 +11,7 @@
 
         </div>-->
         <p class="aboutme-text">Hi, I'm <b>Tim</b> from Berlin! After nearly 10 years doing <b>Marketing for Amazon.de, ATOSS Software, shyftplan and others</b>, I started to learn to develop websites and apps in summer 2020. And yes, so much can be said about Corona on the
-            positive side: it really made one think about what you really want to do with your career! How I learned my skills in <b>HTML, CSS, JavaScript and AngularJS</b>? I started a developer course with the Munich-based <b><a href="https://developerakademie.com/">Developer Akademie</a></b>,
+            positive side: it really made one think about what you really want to do with your career! How I learned my skills in <b>HTML, CSS, JavaScript and AngularJS</b>? I started a developer course with the Munich-based <b><a href="https://developerakademie.com/" target="_blank">Developer Akademie</a></b>,
             besides my full-time job as a Marketing Manager at shyftplan. And what can I say? It worked! Including a lot of ups and downs, help from my tutors, not being afraid to ask a lot of questions and plain commitment.</p>
 
         <div class="skillsandcv">
@@ -48,7 +48,7 @@
 
                     <div class="overlay" *ngIf="popupcss">
                         <div class="popup">
-                            <h2>CSS</h2>
+                            <h2>(S)CSS</h2>
                             <a class="close" (click)="popupcss = false">&times;</a>
                             <div class="content-css">
                                 As with HTML, my first experience with CSS was at my first job at Amazon.de. A bigger experience with CSS I gained in my second job at Netzathleten Media, where I was responsible for setting up and managing display and video ads on thousands of websites
@@ -145,18 +145,127 @@
         </div>
 
         <div class="portfolio">
-            <div class="elpolloloco">
-                <div class="elpollocco-laptop"><img src="assets/img/elpolloloco.png"> </div>
+            <mat-tab-group>
+                <mat-tab label="Angular">
+                    <div class="single-portfolio">
+                        <div class="portfolio-laptop"><img src="assets/img/website.png"> </div>
 
-                <div class="elpolloloco-text">
-                    <h2>Jump 'n' Run Game: "El Pollo Loco"</h2>
-                    <p>This is a small <b>JavaScript-based</b> one-level <b>Jump 'n' Run</b> game named <b><i>"El Pollo Loco"</i></b>. In this game you play the Mexican "Pepe", trying his best to stop a small, but dreadful invasion of crazy chickens ;)</p>
-                    <p>Of course nothing to spend a whole night with, but anyways...<b>give it a shot!</b></p>
-                </div>
+                        <div class="portfolio-text">
+                            <h2>My website</h2>
+                            <p>My first Angular project? You're looking at it. This website was build in Angular and was my first touchpoint with TypeScript. It also was the first instance of me using Angular Material. If you have critiques and/or suggestions
+                                please let me know. I'm still learning ;)
+                            </p>
+                        </div>
+                    </div>
 
-                <div class="buttons"><button mat-raised-button>Play now</button>
-                    <button mat-raised-button>JS Doc</button></div>
-            </div>
+
+                </mat-tab>
+                <mat-tab label="JavaScript">
+                    <div class="single-portfolio">
+                        <div class="portfolio-laptop"><img src="assets/img/elpolloloco.png"> </div>
+
+                        <div class="portfolio-text">
+                            <h2>Jump 'n' Run Game: "El Pollo Loco"</h2>
+                            <p>This is a small <b>JavaScript-based</b> one-level <b>Jump 'n' Run</b> game named <b><i>"El Pollo Loco"</i></b>. In this game you play the Mexican "Pepe", trying his best to stop a small, but dreadful invasion of crazy chickens
+                                ;)
+                            </p>
+                            <p>Of course nothing to spend a whole night with, but anyways...<b>give it a shot!</b></p>
+                            <div class="cta-section">
+                                <a class="btn btn-primary" role="button" href="http://tim-kuntze.developerakademie.com/app_el-pollo-loco/" target="_blank">Lets have a look!</a>
+                                <a class="btn btn-primary" role="button" href="http://tim-kuntze.developerakademie.com/app_el-pollo-loco/" target="_blank">JS Doc</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-portfolio">
+                        <div class="portfolio-laptop"><img src="assets/img/join.png"> </div>
+
+                        <div class="portfolio-text">
+                            <h2>Task Management App: "Join"</h2>
+                            <p>This was my first group-project within Developer Akademie. It's a <b>JavaScript-based</b> Task Management Tool named <b><i>"Join"</i></b>. In this app you can organize tasks by categories and urgencies. I did this project together
+                                with 2 of my classmates and gained first experiences on working on a code with other fellow programmers via GitHub.
+                            </p>
+
+                            <div class="cta-section">
+                                <a class="btn btn-primary" role="button" href="http://tim-kuntze.developerakademie.com/app_el-pollo-loco/" target="_blank">Lets have a look!</a>
+                                <a class="btn btn-primary" role="button" href="http://tim-kuntze.developerakademie.com/app_el-pollo-loco/" target="_blank">JS Doc</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="single-portfolio">
+
+                        <div class="portfolio-laptop"><img src="assets/img/lieferdienst.png"> </div>
+                        <div class="portfolio-text">
+                            <h2>Delivery Service App: "Marios"</h2>
+                            <p>My first a bit more demanding JavaScript project. Now it looks easy, but back then when I was completely new to JavaScript I had quite a bit of a tough time to get a principle understanding of the language. But to cut a long
+                                story short this is a small
+                                <b>Delivery service app</b> for the fictional restaurant <b><i>"Marios"</i></b>. Back then also my first touchpoint with the principals of Arrays.
+                            </p>
+
+                            <div class="cta-section">
+                                <a class="btn btn-primary" role="button" href="http://tim-kuntze.developerakademie.com/app_el-pollo-loco/" target="_blank">Lets have a look!</a>
+                                <a class="btn btn-primary" role="button" href="http://tim-kuntze.developerakademie.com/app_el-pollo-loco/" target="_blank">JS Doc</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </mat-tab>
+                <mat-tab label="Other">
+                    <div class="single-portfolio">
+                        <div class="portfolio-laptop"><img src="assets/img/elpolloloco.png"> </div>
+
+                        <div class="portfolio-text">
+                            <h2>Jump 'n' Run Game: "El Pollo Loco"</h2>
+                            <p>This is a small <b>JavaScript-based</b> one-level <b>Jump 'n' Run</b> game named <b><i>"El Pollo Loco"</i></b>. In this game you play the Mexican "Pepe", trying his best to stop a small, but dreadful invasion of crazy chickens
+                                ;)
+                            </p>
+                            <p>Of course nothing to spend a whole night with, but anyways...<b>give it a shot!</b></p>
+                            <div class="cta-section">
+                                <a class="btn btn-primary" role="button" href="http://tim-kuntze.developerakademie.com/app_el-pollo-loco/" target="_blank">Lets have a look!</a>
+                                <a class="btn btn-primary" role="button" href="http://tim-kuntze.developerakademie.com/app_el-pollo-loco/" target="_blank">JS Doc</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-portfolio">
+                        <div class="portfolio-laptop"><img src="assets/img/join.png"> </div>
+
+                        <div class="portfolio-text">
+                            <h2>Task Management App: "Join"</h2>
+                            <p>This is a small <b>JavaScript-based</b> one-level <b>Jump 'n' Run</b> game named <b><i>"El Pollo Loco"</i></b>. In this game you play the Mexican "Pepe", trying his best to stop a small, but dreadful invasion of crazy chickens
+                                ;)
+                            </p>
+                            <p>Of course nothing to spend a whole night with, but anyways...<b>give it a shot!</b></p>
+                            <div class="cta-section">
+                                <a class="btn btn-primary" role="button" href="http://tim-kuntze.developerakademie.com/app_el-pollo-loco/" target="_blank">Lets have a look!</a>
+                                <a class="btn btn-primary" role="button" href="http://tim-kuntze.developerakademie.com/app_el-pollo-loco/" target="_blank">JS Doc</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="single-portfolio">
+
+                        <div class="portfolio-laptop"><img src="assets/img/lieferdienst.png"> </div>
+                        <div class="portfolio-text">
+                            <h2>Delivery Service App: "Marios"</h2>
+                            <p>This is a small <b>JavaScript-based</b> one-level <b>Jump 'n' Run</b> game named <b><i>"El Pollo Loco"</i></b>. In this game you play the Mexican "Pepe", trying his best to stop a small, but dreadful invasion of crazy chickens
+                                ;)
+                            </p>
+                            <p>Of course nothing to spend a whole night with, but anyways...<b>give it a shot!</b></p>
+                            <div class="cta-section">
+                                <a class="btn btn-primary" role="button" href="http://tim-kuntze.developerakademie.com/app_el-pollo-loco/" target="_blank">Lets have a look!</a>
+                                <a class="btn btn-primary" role="button" href="http://tim-kuntze.developerakademie.com/app_el-pollo-loco/" target="_blank">JS Doc</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </mat-tab>
+            </mat-tab-group>
+
+
+
+
+
+
         </div>
     </div>
 </div>

@@ -25,13 +25,7 @@ h2 {
     flex-direction: column;
     align-items: center;
     margin-top: 64px;
-}
-
-.portfolio {
-    display: flex;
-    justify-content: center;
-    text-align: justify;
-    width: 70%;
+    width: 100%;
 }
 
 .aboutme {
@@ -252,21 +246,42 @@ h2 {
     flex-direction: column;
 }
 
-.elpolloloco {
+.portfolio {
     display: flex;
-    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    width: 70%;
 }
 
-.elpolloloco-laptop {
+.single-portfolio {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-bottom: 64px;
+    margin-top: 64px;
+}
+
+.portfolio-laptop {
     width: 35%;
-    height: 300px;
+    height: 100%;
     display: flex;
     justify-content: center;
     img {
-        width: 35%;
+        width: 100%;
     }
 }
 
-.elpolloloco-text {
+.portfolio-text {
     width: 35%;
+}
+
+.cta-section {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.mat-tab-group {
+    display: flex;
+    align-items: center;
 }
