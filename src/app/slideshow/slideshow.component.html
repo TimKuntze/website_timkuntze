@@ -3,9 +3,17 @@
 </div>
 
 <div class="slideshow-container slideshow-overlay">
-    <p *ngIf="showImage" class="fadeIn">
-        {{ headlines[currentImage] }}
-    </p>
+    <div class="slideshow-text">
+        <p *ngIf="showImage" class="fadeIn">
+            {{ headlines[currentImage] }}
+        </p>
+        <div class="typewriter">
+            <h4>
+                {{ typewriterText[currentImage] }}
+            </h4>
+        </div>
+    </div>
+
 </div>
 
 <div class="arrow-container">

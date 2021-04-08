@@ -1,0 +1,11 @@
+.footer {
+    height: 200px;
+    background-color: rgb(8, 10, 14);
+    color: white;
+    &:hover {
+        background-color: lightgreen;
+        transition: -webkit-clip-path 275ms ease;
+        transition: clip-path 275ms ease;
+        transition: clip-path 275ms ease, -webkit-clip-path 275ms ease;
+    }
+}

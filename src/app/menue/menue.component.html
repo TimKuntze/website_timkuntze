@@ -3,13 +3,22 @@
 
 
     <img *ngIf="darkMode" routerLink="/" src="assets/img/logo1.png">
-    <img *ngIf="!darkMode" routerLink="/" src="assets/img/logo_white.png">
+    <img class="logo" *ngIf="!darkMode" routerLink="/" src="assets/img/logo_neu3.png">
 
-    <div [class.darkLinks]="darkMode">
-        <a routerLink="/">Home</a>
-        <a href="#">Portfolio</a>
-        <a href="#">Contact</a>
-        <a routerLink="/imprint">Imprint</a>
-        <a routerLink="/data-protection">Data protection</a>
+    <!--  <div [class.darkLinks]="darkMode">-->
+    <div class="link-container">
+        <div class="link-1">
+            <a class="menue-link home-link" routerLink="/">Home</a>
+        </div>
+        <div class="link-1">
+            <a class="menue-link" routerLink="/">About me</a>
+        </div>
+        <div class="link-1">
+            <a class="menue-link" href="#">Portfolio</a>
+        </div>
+        <div class="link-1">
+            <a class="menue-link" href="#">Contact</a>
+        </div>
     </div>
+    <!--</div>-->
 </header>

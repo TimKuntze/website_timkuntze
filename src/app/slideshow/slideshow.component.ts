@@ -13,6 +13,12 @@ export class SlideshowComponent implements OnInit {
     'Graduate of Developer Akademie',
     'Hands-on mentality'
   ];
+  typewriterText = [
+    "Welcome to my website! I'm programming since summer 2020 and eager to learn more.",
+    'With the help of this young and awesome coding academy, I managed to have quite a steep learning curve.',
+    "...and I'm never afraid to learn new and challenging things :)"
+  ];
+
   currentImage = 0;
   showImage = true;
 

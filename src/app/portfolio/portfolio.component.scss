@@ -258,6 +258,7 @@ h2 {
     display: flex;
     width: 100%;
     justify-content: space-evenly;
+    align-items: center;
     margin-bottom: 64px;
     margin-top: 64px;
 }
@@ -284,4 +285,10 @@ h2 {
 .mat-tab-group {
     display: flex;
     align-items: center;
+}
+
+.mat-raised-button {
+    &:hover {
+        filter: brightness(1.1);
+    }
 }
