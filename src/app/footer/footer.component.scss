@@ -1,11 +1,215 @@
-.footer {
-    height: 200px;
-    background-color: rgb(8, 10, 14);
-    color: white;
-    &:hover {
-        background-color: lightgreen;
-        transition: -webkit-clip-path 275ms ease;
-        transition: clip-path 275ms ease;
-        transition: clip-path 275ms ease, -webkit-clip-path 275ms ease;
+footer {
+    height: 220px;
+    padding-bottom: 20px;
+    background-color: rgb(6, 10, 11);
+    p {
+        text-align: center;
     }
+    .phrase {
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        padding: 30px;
+        padding-bottom: 10px;
+        p {
+            margin: 0px;
+            text-align: center;
+            line-height: normal;
+        }
+    }
+    .socialMediaContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .touch-area {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            margin: 20px;
+            .socialMedia {
+                width: 40px;
+                margin: 30px;
+                padding: 0px;
+                filter: invert(1);
+                &:hover {
+                    animation: shake 0.5s cubic-bezier(0.4, 0.08, 0.2, 1);
+                    transform: translate3d(0, 0, 0);
+                    backface-visibility: hidden;
+                    perspective: 900px;
+                }
+            }
+        }
+    }
+    .legal-requirements {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        p {
+            padding-bottom: 20px;
+            width: 100px;
+            a {
+                text-decoration: none;
+                position: relative;
+                transition: clip-path 275ms ease;
+                cursor: pointer;
+                &:hover span::before,
+                &:focus span::before {
+                    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                }
+                span {
+                    position: relative;
+                    display: inline-block;
+                    color: white;
+                    &::before {
+                        position: absolute;
+                        content: attr(data-content);
+                        color: #45A29E;
+                        clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
+                        transition: clip-path 275ms ease;
+                    }
+                }
+            }
+        }
+    }
+    .CR {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: rgb(6, 10, 11);
+        color: gray;
+    }
+}
+
+@media (max-width: 700px) {
+    .socialMedia {
+        width: 50px;
+        padding: 10px;
+    }
+}
+
+@keyframes shake {
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+    30%,
+    70% {
+        transform: translate3d(2px, 0, 0);
+    }
+    40%,
+    50% {
+        transform: translate3d(-2px, 0, 0);
+    }
+}
+
+.link-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menue-link {
+    text-transform: uppercase;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+.home-link {
+    color: gray !important;
+}
+
+.link-1 a:before,
+.link-1 a:after {
+    content: '';
+    border-bottom: solid 1px white;
+    position: absolute;
+    bottom: 0;
+    width: 0;
+}
+
+.link-1 a:before {
+    left: 0;
+}
+
+.link-1 a:after {
+    right: 0;
+}
+
+.link-1 a:hover:before,
+.link-1 a:hover:after {
+    width: 50%;
+}
+
+.link-1 a:before,
+.link-1 a:after {
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.25s ease;
+}
+
+.typewriter-container {
+    padding-top: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.typewriter h4 {
+    color: lightgray;
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid rgb(206, 86, 86);
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em;
+    /* Adjust as needed */
+    animation: typing 1s steps(50, end), blink-caret .50s step-end infinite;
+}
+
+
+/* The typing effect */
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+    to {
+        width: 100%
+    }
+}
+
+
+/* The typewriter cursor effect */
+
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent
+    }
+    50% {
+        border-color: rgb(206, 86, 86);
+    }
+}
+
+.typewrite {
+    color: lightgray;
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid rgb(206, 86, 86);
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em;
+    /* Adjust as needed */
+    animation: typing 1s steps(50, end), blink-caret .50s step-end infinite;
 }

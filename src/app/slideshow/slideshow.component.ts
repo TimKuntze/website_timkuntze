@@ -24,6 +24,7 @@ export class SlideshowComponent implements OnInit {
 
   ngOnInit() {
     this.updateImage();
+    
   }
 
   updateImage() {
@@ -34,7 +35,7 @@ export class SlideshowComponent implements OnInit {
       setTimeout(() => {
         this.showImage = true;
       }, 10)
-    }, 8000);
+    }, 11400);
   }
 
 }

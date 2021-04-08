@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./data-protection.component.scss']
 })
 export class DataProtectionComponent implements OnInit {
+  
 
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }
