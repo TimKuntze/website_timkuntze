@@ -7,12 +7,16 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 
 export class MenueComponent implements OnInit {
-  @Input() darkMode = true;
+
   constructor() { }
 
   ngOnInit(): void {
-  }
 
-public onToggleSidenav = () => {}
+
+
+  }
+  
+
+
 
 }

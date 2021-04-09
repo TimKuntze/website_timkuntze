@@ -1,12 +1,12 @@
-<header [class.headerDark]="darkMode">
+<header>
 
 
 
-    <img *ngIf="darkMode" routerLink="/" src="assets/img/logo1.png">
-    <img class="logo" *ngIf="!darkMode" routerLink="/" src="assets/img/logo_neu3.png">
 
-    <!--  <div [class.darkLinks]="darkMode">-->
-    <div class="link-container">
+    <img class="logo" routerLink="/" src="assets/img/logo_neu3.png">
+
+
+    <div id="navbar" class="link-container">
         <div class="link-1">
             <a class="menue-link home-link" routerLink="/">Home</a>
         </div>
@@ -17,8 +17,8 @@
             <a class="menue-link" href="#">Portfolio</a>
         </div>
         <div class="link-1">
-            <a class="menue-link" href="#">Contact</a>
+            <a class="menue-link" routerLink="/contact">Contact</a>
         </div>
     </div>
-    <!--</div>-->
+
 </header>

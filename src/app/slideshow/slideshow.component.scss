@@ -11,7 +11,7 @@
     max-width: 100%;
     object-fit: cover;
     object-position: top;
-    animation: zoomIn 11.4s ease-in-out;
+    animation: zoomIn 11.45s ease-in-out;
 }
 
 @keyframes zoomIn {
@@ -20,6 +20,15 @@
     }
     to {
         transform: scale(1.2);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
     }
 }
 
@@ -36,7 +45,7 @@
         height: 120px;
         padding-left: 32px;
         color: white;
-        font-size: 48px;
+        font-size: 42px;
         border-left: 8px solid rgb(206, 86, 86);
         margin-left: 120px;
     }
@@ -67,8 +76,12 @@
     img {
         width: 60px;
         object-fit: contain;
-        animation: up-down 2.5s infinite ease-out;
+        animation: up-down 2.5s infinite ease-in-out;
     }
+}
+
+.rotate {
+    animation: fadeOut 1s ease-in forwards;
 }
 
 @keyframes up-down {

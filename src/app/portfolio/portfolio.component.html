@@ -1,11 +1,11 @@
 <div class="homepage-content">
 
     <div class="headlines" id="aboutme">
-        <h1>About me</h1>
+        <span class="thick">About</span><span class="thin">me</span>
     </div>
 
     <div class="aboutme">
-        <!--  <div class="aboutme-img_logo-section">
+        <!--<div class="aboutme-img_logo-section">
 
             <img src="assets/img/cv_picture.jpg">
 
@@ -15,133 +15,144 @@
             besides my full-time job as a Marketing Manager at shyftplan. And what can I say? It worked! Including a lot of ups and downs, help from my tutors, not being afraid to ask a lot of questions and plain commitment.</p>
 
         <div class="skillsandcv">
-            <div class="skillset">
-                <div class="skillset-header">
-                    <h2>Skill set</h2>
-                    <span>(Click bars for more info)</span>
-                </div>
-                <br><br>
-                <div class="skillbar-container">
-                    <span>HTML</span>
+            <mat-accordion>
 
-                    <div (click)="popuphtml = true" class="skill-container">
-                        <div class="skills html-bar">
+                <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" [expanded]="true">
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Skill set
+                        </mat-panel-title>
+                        <mat-panel-description>
+                            Click bars for more info
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <div class="skillbar-container">
+                        <span>HTML</span>
+
+                        <div (click)="popuphtml = true" class="skill-container">
+                            <div class="skills html-bar">
+                            </div>
+
                         </div>
 
-                    </div>
+                        <div class="overlay" *ngIf="popuphtml">
+                            <div class="popup">
+                                <h2>HTML</h2>
+                                <a class="close" (click)="popuphtml = false">&times;</a>
+                                <div class="content-html">
+                                    Since my first job after my studies of business psychology as Marketing Manager at Amazon.de (ca. 2011), I was building small Landing Pages with the help of a basic knowledge and understanding of HTML and CSS. So before my adventure of joining the Developer
+                                    Akademie, I had least some small foundation.
+                                </div>
+                            </div>
+                        </div>
+                        <span>CSS</span>
 
-                    <div class="overlay" *ngIf="popuphtml">
-                        <div class="popup">
-                            <h2>HTML</h2>
-                            <a class="close" (click)="popuphtml = false">&times;</a>
-                            <div class="content-html">
-                                Since my first job after my studies of business psychology as Marketing Manager at Amazon.de (ca. 2011), I was building small Landing Pages with the help of a basic knowledge and understanding of HTML and CSS. So before my adventure of joining the Developer
-                                Akademie, I had least some small foundation.
+                        <div (click)="popupcss = true" class="skill-container">
+                            <div class="skills css-bar"></div>
+                        </div>
+
+                        <div class="overlay" *ngIf="popupcss">
+                            <div class="popup">
+                                <h2>(S)CSS</h2>
+                                <a class="close" (click)="popupcss = false">&times;</a>
+                                <div class="content-css">
+                                    As with HTML, my first experience with CSS was at my first job at Amazon.de. A bigger experience with CSS I gained in my second job at Netzathleten Media, where I was responsible for setting up and managing display and video ads on thousands of websites
+                                    - of course a cleanly written CSS of our partner websites played a big role here (especially in regard of being responsive for different devices). If that was not the case, I was happy to help :). But since my days
+                                    at Developer Akademie I learned a lot of extra tricks and knowledge, that would have helped me a lot in that job, which I just now realized.
+                                </div>
+                            </div>
+                        </div>
+
+                        <span>JavaScript</span>
+                        <div (click)="popupjs = true" class="skill-container">
+                            <div class="skills js-bar"></div>
+                        </div>
+
+
+                        <div class="overlay" *ngIf="popupjs">
+                            <div class="popup">
+                                <h2>JavaScript</h2>
+                                <a class="close" (click)="popupjs = false">&times;</a>
+                                <div class="content-js">
+                                    With JavaScript I had no experience whatsoever, except being the end-user, before joing the Developer Akademie. To be honest with you: when I first started to (try to) programm litte apps like a primitive QuizzApp and a little devilvery service app, I
+                                    thought I will never learn it properly. But it is like learning a normal language. The more you try and the more you are confronted with it, there will come the time - sooner or later - where it makes "click". Of course
+                                    I can't say that I'm a fluent or native speaker of JavaScript, yet. But I think I came pretty far since my start and I'm eager to reach my goals to be a natural speaker ;) - have a look at my portfolio!
+                                </div>
+                            </div>
+                        </div>
+
+                        <span>GitHub</span>
+                        <div (click)="popupgithub = true" class="skill-container">
+                            <div class="skills github-bar"></div>
+                        </div>
+
+                        <div class="overlay" *ngIf="popupgithub">
+                            <div class="popup">
+                                <h2>GitHub</h2>
+                                <a class="close" (click)="popupgithub = false">&times;</a>
+                                <div class="content-github">
+                                    Sharing and merging code? If in solo-projects or group-projects, so far no problem (although the group-project part can be pretty tricky from time to time).
+                                </div>
+                            </div>
+                        </div>
+
+                        <span>TypeScript/Angular</span>
+                        <div (click)="popupangular = true" class="skill-container">
+                            <div class="skills angular-bar"></div>
+                        </div>
+
+                        <div class="overlay" *ngIf="popupangular">
+                            <div class="popup">
+                                <h2>Angular</h2>
+                                <a class="close" (click)="popupangular = false">&times;</a>
+                                <div class="content-angular">
+                                    My first AngularJS project? You're looking at it, as I programmed it with Angular. Although it was not easy to go from plain JavaScript coding to Angular, because of some things that are different, I have to say that i makes programming much more effective
+                                    and clear!
+                                </div>
+                            </div>
+                        </div>
+
+                        <span>Scrum</span>
+                        <div (click)="popupscrum = true" class="skill-container">
+                            <div class="skills scrum-bar"></div>
+                        </div>
+
+                        <div class="overlay" *ngIf="popupscrum">
+                            <div class="popup">
+                                <h2>Scrum</h2>
+                                <a class="close" (click)="popupscrum = false">&times;</a>
+                                <div class="content-scrum">
+                                    Scrum
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <span>CSS</span>
+                </mat-expansion-panel>
+            </mat-accordion>
 
-                    <div (click)="popupcss = true" class="skill-container">
-                        <div class="skills css-bar"></div>
+            <mat-accordion>
+                <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            My CV
+                        </mat-panel-title>
+                        <mat-panel-description>
+                            Open & click image to download
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <div class="cvimg">
+                        <a href="assets/downloads/pdf-example.pdf" download>
+                            <img src="assets/img/cv-mockup-neu2.jpeg">
+                        </a>
                     </div>
+                </mat-expansion-panel>
+            </mat-accordion>
 
-                    <div class="overlay" *ngIf="popupcss">
-                        <div class="popup">
-                            <h2>(S)CSS</h2>
-                            <a class="close" (click)="popupcss = false">&times;</a>
-                            <div class="content-css">
-                                As with HTML, my first experience with CSS was at my first job at Amazon.de. A bigger experience with CSS I gained in my second job at Netzathleten Media, where I was responsible for setting up and managing display and video ads on thousands of websites
-                                - of course a cleanly written CSS of our partner websites played a big role here (especially in regard of being responsive for different devices). If that was not the case, I was happy to help :). But since my days at Developer
-                                Akademie I learned a lot of extra tricks and knowledge, that would have helped me a lot in that job, which I just now realized.
-                            </div>
-                        </div>
-                    </div>
-
-                    <span>JavaScript</span>
-                    <div (click)="popupjs = true" class="skill-container">
-                        <div class="skills js-bar"></div>
-                    </div>
-
-
-                    <div class="overlay" *ngIf="popupjs">
-                        <div class="popup">
-                            <h2>JavaScript</h2>
-                            <a class="close" (click)="popupjs = false">&times;</a>
-                            <div class="content-js">
-                                With JavaScript I had no experience whatsoever, except being the end-user, before joing the Developer Akademie. To be honest with you: when I first started to (try to) programm litte apps like a primitive QuizzApp and a little devilvery service app, I
-                                thought I will never learn it properly. But it is like learning a normal language. The more you try and the more you are confronted with it, there will come the time - sooner or later - where it makes "click". Of course
-                                I can't say that I'm a fluent or native speaker of JavaScript, yet. But I think I came pretty far since my start and I'm eager to reach my goals to be a natural speaker ;) - have a look at my portfolio!
-                            </div>
-                        </div>
-                    </div>
-
-                    <span>GitHub</span>
-                    <div (click)="popupgithub = true" class="skill-container">
-                        <div class="skills github-bar"></div>
-                    </div>
-
-                    <div class="overlay" *ngIf="popupgithub">
-                        <div class="popup">
-                            <h2>GitHub</h2>
-                            <a class="close" (click)="popupgithub = false">&times;</a>
-                            <div class="content-github">
-                                Sharing and merging code? If in solo-projects or group-projects, so far no problem (although the group-project part can be pretty tricky from time to time).
-                            </div>
-                        </div>
-                    </div>
-
-                    <span>TypeScript/Angular</span>
-                    <div (click)="popupangular = true" class="skill-container">
-                        <div class="skills angular-bar"></div>
-                    </div>
-
-                    <div class="overlay" *ngIf="popupangular">
-                        <div class="popup">
-                            <h2>Angular</h2>
-                            <a class="close" (click)="popupangular = false">&times;</a>
-                            <div class="content-angular">
-                                My first AngularJS project? You're looking at it, as I programmed it with Angular. Although it was not easy to go from plain JavaScript coding to Angular, because of some things that are different, I have to say that i makes programming much more effective
-                                and clear!
-                            </div>
-                        </div>
-                    </div>
-
-                    <span>Scrum</span>
-                    <div (click)="popupscrum = true" class="skill-container">
-                        <div class="skills scrum-bar"></div>
-                    </div>
-
-                    <div class="overlay" *ngIf="popupscrum">
-                        <div class="popup">
-                            <h2>Scrum</h2>
-                            <a class="close" (click)="popupscrum = false">&times;</a>
-                            <div class="content-scrum">
-                                Scrum
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="cv">
-                <h2>My CV as pdf</h2>
-                <span>(Click image below to download)</span>
-
-                <div class="cvimg">
-                    <a href="assets/downloads/pdf-example.pdf" download>
-                        <img src="assets/img/cv-mockup-neu2.jpeg">
-                    </a>
-                </div>
-
-
-            </div>
         </div>
     </div>
     <div class="bg2">
         <div class="headlines">
-            <h1>Portfolio</h1>
+            <span class="thin">My</span><span class="thick">Portfolio</span>
         </div>
 
         <div class="portfolio">
@@ -151,10 +162,13 @@
                         <div class="portfolio-laptop"><img src="assets/img/website.png"> </div>
 
                         <div class="portfolio-text">
-                            <h4>My website</h4>
+                            <h3>My website</h3>
                             <p>My first Angular project? You're looking at it. This website was build in Angular and was my first touchpoint with TypeScript. It also was the first instance of me using Angular Material. If you have critiques and/or suggestions
                                 please let me know. I'm still learning ;)
                             </p>
+                            <div class="cta-section">
+                                <a href="https://github.com/TimKuntze/website_timkuntze" target="_blank"><button mat-raised-button color="primary">GitHub</button></a>
+                            </div>
                         </div>
                     </div>
 
@@ -162,10 +176,16 @@
                         <div class="portfolio-laptop"><img src="assets/img/Ringoffire.png"> </div>
 
                         <div class="portfolio-text">
-                            <h4>Ring of Fire</h4>
-                            <p>This game was built with Angular and Firebase. The following resources were applied: structural directives, dependency injection, components and bidings. After start a new game, share the link with a friend for a multiplayer
+                            <h3>Drinking game: "Ring of Fire"</h3>
+                            <p>This game was built with Angular and Firebase. The following resources were applied: structural directives, dependency injection, components and bidings. After you started a new game, share the link with a friend for a multiplayer
                                 experience.
                             </p>
+                            <div class="cta-section">
+
+                                <a href="https://ring-of-fire-e6e27.web.app/" target="_blank"><button mat-raised-button color="primary">Lets have a look!</button></a>
+                                <a href="https://github.com/TimKuntze/app_ringoffire" target="_blank"><button mat-raised-button color="primary">GitHub</button></a>
+
+                            </div>
                         </div>
                     </div>
 
@@ -176,15 +196,14 @@
                         <div class="portfolio-laptop"><img src="assets/img/elpolloloco.png"> </div>
 
                         <div class="portfolio-text">
-                            <h4>Jump 'n' Run Game: "El Pollo Loco"</h4>
+                            <h3>Jump 'n' Run Game: "El Pollo Loco"</h3>
                             <p>This is a small <b>JavaScript-based</b> one-level <b>Jump 'n' Run</b> game named <b><i>"El Pollo Loco"</i></b>. In this game you play the Mexican "Pepe", trying his best to stop a small, but dreadful invasion of crazy chickens
                                 ;)
                             </p>
                             <p>Of course nothing to spend a whole night with, but anyways...<b>give it a shot!</b></p>
                             <div class="cta-section">
-
-                                <button mat-raised-button color="primary" href="http://tim-kuntze.developerakademie.com/app_el-pollo-loco/" target="_blank">Lets have a look!</button>
-                                <button mat-raised-button color="primary" href="http://tim-kuntze.developerakademie.com/app_el-pollo-loco/" target="_blank">JS Doc</button>
+                                <a href="http://tim-kuntze.developerakademie.com/app_el-pollo-loco/" target="_blank"><button mat-raised-button color="primary">Lets have a look!</button></a>
+                                <a href="https://github.com/TimKuntze/app_elpolloloco" target="_blank"><button mat-raised-button color="primary">GitHub</button></a>
                             </div>
                         </div>
                     </div>
@@ -192,14 +211,14 @@
                         <div class="portfolio-laptop"><img src="assets/img/join.png"> </div>
 
                         <div class="portfolio-text">
-                            <h4>Task Management App: "Join"</h4>
+                            <h3>Task Management App: "Join"</h3>
                             <p>This was my first group-project within Developer Akademie. It's a <b>JavaScript-based</b> Task Management Tool named <b><i>"Join"</i></b>. In this app you can organize tasks by categories and urgencies. I did this project together
                                 with 2 of my classmates and gained first experiences on working on a code with other fellow programmers via GitHub.
                             </p>
 
                             <div class="cta-section">
-                                <button mat-raised-button color="primary" href="http://tim-kuntze.developerakademie.com/app_el-pollo-loco/" target="_blank">Lets have a look!</button>
-                                <button mat-raised-button color="primary" href="http://tim-kuntze.developerakademie.com/app_el-pollo-loco/" target="_blank">JS Doc</button>
+                                <a href="http://tim-kuntze.developerakademie.com/app_join" target="_blank"><button mat-raised-button color="primary">Lets have a look!</button></a>
+                                <a href="https://github.com/TimKuntze/grouptask_task-management-app" target="_blank"><button mat-raised-button color="primary">GitHub</button></a>
                             </div>
                         </div>
 
@@ -208,68 +227,40 @@
 
                         <div class="portfolio-laptop"><img src="assets/img/lieferdienst.png"> </div>
                         <div class="portfolio-text">
-                            <h4>Delivery Service App: "Marios"</h4>
+                            <h3>Delivery Service App: "Marios"</h3>
                             <p>My first a bit more demanding JavaScript project. Now it looks easy, but back then when I was completely new to JavaScript I had quite a bit of a tough time to get a principle understanding of the language. But to cut a long
                                 story short this is a small
                                 <b>Delivery service app</b> for the fictional restaurant <b><i>"Marios"</i></b>. Back then also my first touchpoint with the principals of Arrays.
                             </p>
 
                             <div class="cta-section">
-                                <button mat-raised-button color="primary" href="http://tim-kuntze.developerakademie.com/app_el-pollo-loco/" target="_blank">Lets have a look!</button>
-                                <button mat-raised-button color="primary" href="http://tim-kuntze.developerakademie.com/app_el-pollo-loco/" target="_blank">JS Doc</button>
+                                <a href="http://tim-kuntze.developerakademie.com/app_el-pollo-loco/" target="_blank"><button mat-raised-button color="primary">Lets have a look!</button></a>
+                                <a href="https://github.com/TimKuntze/app_delivery-service" target="_blank"><button mat-raised-button color="primary">GitHub</button></a>
                             </div>
                         </div>
 
                     </div>
                 </mat-tab>
                 <mat-tab label="Other">
-                    <div class="single-portfolio">
-                        <div class="portfolio-laptop"><img src="assets/img/elpolloloco.png"> </div>
 
-                        <div class="portfolio-text">
-                            <h4>Jump 'n' Run Game: "El Pollo Loco"</h4>
-                            <p>This is a small <b>JavaScript-based</b> one-level <b>Jump 'n' Run</b> game named <b><i>"El Pollo Loco"</i></b>. In this game you play the Mexican "Pepe", trying his best to stop a small, but dreadful invasion of crazy chickens
-                                ;)
-                            </p>
-                            <p>Of course nothing to spend a whole night with, but anyways...<b>give it a shot!</b></p>
-                            <div class="cta-section">
-                                <button mat-raised-button color="primary" href="http://tim-kuntze.developerakademie.com/app_el-pollo-loco/" target="_blank">Lets have a look!</button>
-                                <button mat-raised-button color="primary" href="http://tim-kuntze.developerakademie.com/app_el-pollo-loco/" target="_blank">JS Doc</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="single-portfolio">
-                        <div class="portfolio-laptop"><img src="assets/img/join.png"> </div>
 
+                    <div class="single-portfolio">
+
+                        <div class="portfolio-laptop"><img src="assets/img/coming_soon.png"> </div>
                         <div class="portfolio-text">
-                            <h4>Task Management App: "Join"</h4>
-                            <p>This is a small <b>JavaScript-based</b> one-level <b>Jump 'n' Run</b> game named <b><i>"El Pollo Loco"</i></b>. In this game you play the Mexican "Pepe", trying his best to stop a small, but dreadful invasion of crazy chickens
-                                ;)
-                            </p>
-                            <p>Of course nothing to spend a whole night with, but anyways...<b>give it a shot!</b></p>
+                            <h3>Coming soon!</h3>
+
+
                             <div class="cta-section">
-                                <button mat-raised-button color="primary" href="http://tim-kuntze.developerakademie.com/app_el-pollo-loco/" target="_blank">Lets have a look!</button>
-                                <button mat-raised-button color="primary" href="http://tim-kuntze.developerakademie.com/app_el-pollo-loco/" target="_blank">JS Doc</button>
+
                             </div>
                         </div>
 
                     </div>
-                    <div class="single-portfolio">
 
-                        <div class="portfolio-laptop"><img src="assets/img/lieferdienst.png"> </div>
-                        <div class="portfolio-text">
-                            <h4>Delivery Service App: "Marios"</h4>
-                            <p>This is a small <b>JavaScript-based</b> one-level <b>Jump 'n' Run</b> game named <b><i>"El Pollo Loco"</i></b>. In this game you play the Mexican "Pepe", trying his best to stop a small, but dreadful invasion of crazy chickens
-                                ;)
-                            </p>
-                            <p>Of course nothing to spend a whole night with, but anyways...<b>give it a shot!</b></p>
-                            <div class="cta-section">
-                                <button mat-raised-button color="primary" href="http://tim-kuntze.developerakademie.com/app_el-pollo-loco/" target="_blank">Lets have a look!</button>
-                                <button mat-raised-button color="primary" href="http://tim-kuntze.developerakademie.com/app_el-pollo-loco/" target="_blank">JS Doc</button>
-                            </div>
-                        </div>
 
-                    </div>
+
+
                 </mat-tab>
             </mat-tab-group>
 
