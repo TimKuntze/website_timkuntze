@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-menue', 
@@ -12,11 +12,6 @@ export class MenueComponent implements OnInit {
 
   ngOnInit(): void {
 
-
-
   }
-  
-
-
 
 }

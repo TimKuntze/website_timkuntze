@@ -16,6 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DialogContactComponent } from './dialog-contact/dialog-contact.component';
+import { RouterModule, Router } from '@angular/router';
+
 
 
 
@@ -41,7 +43,7 @@ import { DialogContactComponent } from './dialog-contact/dialog-contact.componen
     DataProtectionComponent,
     FooterComponent,
     ContactComponent,
-    DialogContactComponent
+    DialogContactComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,7 +57,8 @@ import { DialogContactComponent } from './dialog-contact/dialog-contact.componen
     AppRoutingModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
