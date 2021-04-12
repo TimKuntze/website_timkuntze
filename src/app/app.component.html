@@ -1,11 +1,10 @@
 <app-menue></app-menue>
-<div [class.container]="router.url !== '/'">
+<div [class.container]="router.url !== '/' && router.url !=='/contact'">
     <router-outlet>
     </router-outlet>
     <div *ngIf="router.url == '/'">
         <app-portfolio></app-portfolio>
     </div>
-
 </div>
 
 <app-footer></app-footer>

@@ -1,28 +1,94 @@
-<app-menue></app-menue>
-<div class="topBanner">
-    <h1>Contact Me</h1>
-    <h2>Do you have any questions about my work? Don't be shy and get in touch.</h2>
-</div>
-<div class="container">
-    <div class="title">
-        <h2>Contact</h2>
+<div class="contact">
+
+    <div class="headlines">
+        <span class="thick">Contact</span><span class="thin">me</span>
     </div>
-    <form action="mailto:timkuntze@gmx.de" method="POST" enctype="text/plain">
-        <div class="inputArea">
-            <h3>Name</h3>
-            <input required minlength="3" type="text" name="name">
-            <h3>e-Mail</h3>
-            <input type="email" name="mail">
-            <h3>your Message</h3>
-            <textarea required minlength="10" type="text" name="message"></textarea>
-            <div class="container-btn">
-                <button class="btn" style="width: auto; height: auto;" type="submit">send Message</button>
+
+    <div class="container">
+
+        <!--
+        <form action="mailto:timkuntze@gmx.de" method="POST" enctype="text/plain">
+            <div class="inputArea">
+                <h3>Name</h3>
+                <input required minlength="3" type="text" name="name">
+                <h3>E-mail</h3>
+                <input type="email" name="mail">
+                <h3>Your message</h3>
+                <textarea required minlength="5" type="text" name="message"></textarea>
+                <div class="container-btn">
+                    <button mat-raised-button color="primary" style="width: auto; height: auto;" type="submit">Send message</button>
+                </div>
             </div>
+        </form>
+
+-->
+        <!--
+        <form #form="ngForm" (ngSubmit)="onSubmit(userPost.value)">
+
+
+            <input type="text" name="name" placeholder="Name" ngModel><br><br>
+            <input type="text" name="email" placeholder="E-mail" ngModel><br><br>
+            <input type="text" name="message" placeholder="Your message" ngModel>
+            <button mat-raised-button color="primary" style="width: auto; height: auto;" type="submit">Send message</button>
+
+        </form>
+
+        -->
+
+
+        <form #form [formGroup]="addressForm" #contactDirective="ngForm" (ngSubmit)="sendMail()">
+            <mat-card>
+                <mat-card-header>
+
+                </mat-card-header>
+                <mat-card-content>
+                    <div>
+                        <div>
+                            <mat-form-field>
+                                <input required matInput placeholder="Name" formControlName="name" name="name" />
+                                <mat-error *ngIf="addressForm.controls['name'].hasError('required')">
+                                    First name is <strong>required</strong>
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <mat-form-field>
+                                <mat-label>Email</mat-label>
+                                <input type="email" matInput placeholder="Ex. pat@example.com" formControlName="email" name="email" required/>
+                                <mat-error *ngIf="addressForm.controls['email'].hasError('required')">
+                                    Email is <strong>required</strong>
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div>
+                            <mat-form-field>
+                                <mat-label> Your message</mat-label>
+                                <textarea matInput placeholder="Your message" formControlName="message" name="message" required></textarea>
+                                <mat-error *ngIf="addressForm.controls['message'].hasError('required')">
+                                    A Message is <strong>required</strong>
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" type="submit">
+                Submit
+              </button>
+                </mat-card-actions>
+            </mat-card>
+        </form>
+
+        <div class="picture">
+
+            <img src="assets/img/cv_picture.jpg"><i>Contact me for your next project, if you have questions or to just say hello ;)</i> - Tim
+
         </div>
-    </form>
 
-
+    </div>
 </div>
-
-
-<app-footer></app-footer>
