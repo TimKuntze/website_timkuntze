@@ -67,10 +67,12 @@ export class ContactComponent implements OnInit, AfterViewInit {
         referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
         body: formData, // body data type must match "Content-Type" header
       });
+      console.log(response);
       this.openDialog(true);
       this.router.navigate(['/'])
       this.addressForm.reset();
     } catch (error) {
+      console.log("ERRORR!");
       console.error(error);
       this.openDialog(false);
     }

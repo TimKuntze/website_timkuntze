@@ -4,37 +4,7 @@
         <span class="thick">Contact</span><span class="thin">me</span>
     </div>
 
-    <div class="container">
-
-        <!--
-        <form action="mailto:timkuntze@gmx.de" method="POST" enctype="text/plain">
-            <div class="inputArea">
-                <h3>Name</h3>
-                <input required minlength="3" type="text" name="name">
-                <h3>E-mail</h3>
-                <input type="email" name="mail">
-                <h3>Your message</h3>
-                <textarea required minlength="5" type="text" name="message"></textarea>
-                <div class="container-btn">
-                    <button mat-raised-button color="primary" style="width: auto; height: auto;" type="submit">Send message</button>
-                </div>
-            </div>
-        </form>
-
--->
-        <!--
-        <form #form="ngForm" (ngSubmit)="onSubmit(userPost.value)">
-
-
-            <input type="text" name="name" placeholder="Name" ngModel><br><br>
-            <input type="text" name="email" placeholder="E-mail" ngModel><br><br>
-            <input type="text" name="message" placeholder="Your message" ngModel>
-            <button mat-raised-button color="primary" style="width: auto; height: auto;" type="submit">Send message</button>
-
-        </form>
-
-        -->
-
+    <div class="contact-container">
 
         <form #form [formGroup]="addressForm" #contactDirective="ngForm" (ngSubmit)="sendMail()">
             <mat-card>

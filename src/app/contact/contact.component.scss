@@ -1,7 +1,9 @@
-.container {
+.contact-container {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    width: 75%;
+    max-width: 900px;
 }
 
 .contact {
@@ -19,32 +21,6 @@ mat-form-field {
 mat-card {
     min-width: 300px;
 }
-
-
-/*input {
-    width: 90%;
-    height: 50px;
-    background-color: #f0f0f0;
-    border: solid black 1px;
-    border-radius: 8px;
-    font-family: 'Raleway', sans-serif;
-    font-size: 18px;
-    padding: 12px;
-    margin-bottom: 12px;
-}*/
-
-
-/*textarea {
-    width: 90%;
-    height: 200px;
-    background-color: #f0f0f0;
-    border: solid black 1px;
-    border-radius: 12px;
-    font-family: 'Raleway', sans-serif;
-    font-size: 18px;
-    padding: 12px;
-    margin-bottom: 12px;
-}*/
 
 .headlines {
     border-bottom: 8px solid rgb(206, 86, 86);
@@ -77,7 +53,7 @@ mat-card {
     text-align: center;
     max-width: 300px;
     img {
-        width: 200px;
+        width: 180px;
         border: 1px solid rgb(206, 86, 86);
         border-radius: 100%;
         margin-bottom: 24px;

@@ -17,6 +17,8 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DialogContactComponent } from './dialog-contact/dialog-contact.component';
 import { RouterModule, Router } from '@angular/router';
+import { AboutMeComponent } from './about-me/about-me.component';
+import { StartScreenComponent } from './start-screen/start-screen.component';
 
 
 
@@ -44,6 +46,8 @@ import { RouterModule, Router } from '@angular/router';
     FooterComponent,
     ContactComponent,
     DialogContactComponent,
+    AboutMeComponent,
+    StartScreenComponent,
   ],
   imports: [
     BrowserModule,
