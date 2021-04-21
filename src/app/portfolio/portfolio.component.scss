@@ -36,233 +36,6 @@ h2 {
     width: 100%;
 }
 
-.aboutme {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: justify;
-    width: 70%;
-}
-
-.aboutme-text {
-    max-width: 900px;
-}
-
-.skillsandcv {
-    padding-top: 32px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    justify-content: space-evenly;
-}
-
-.skillset {
-    width: 35%;
-}
-
-.cv {
-    width: 35%;
-    align-items: center;
-}
-
-.cvimg {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    border: 1px solid lightgray;
-    img {
-        width: 100%;
-        max-width: 450px;
-    }
-}
-
-
-/* Make sure that padding behaves as expected */
-
-* {
-    box-sizing: border-box
-}
-
-
-/* Container for skill bars */
-
-.skill-container {
-    width: 100%;
-    /* Full width */
-    background-color: #ddd;
-    /* Grey background */
-}
-
-.skills {
-    text-align: right;
-    /* Right-align text */
-    padding-top: 10px;
-    /* Add top padding */
-    padding-bottom: 10px;
-    /* Add bottom padding */
-    color: white;
-    /* White text color */
-    margin-bottom: 10px;
-    cursor: pointer;
-}
-
-.skillset-header {
-    text-align: center;
-}
-
-.skillbar-container {
-    width: 100%;
-}
-
-.html-bar {
-    width: 85%;
-    opacity: 0.5;
-    background-color: #4CAF50;
-    &:hover {
-        opacity: 1;
-    }
-}
-
-
-/* Green */
-
-.css-bar {
-    width: 85%;
-    opacity: 0.5;
-    background-color: #2196F3;
-    &:hover {
-        opacity: 1;
-    }
-}
-
-
-/* Blue */
-
-.js-bar {
-    width: 65%;
-    opacity: 0.5;
-    background-color: #f44336;
-    &:hover {
-        opacity: 1;
-    }
-}
-
-
-/* Red */
-
-.github-bar {
-    width: 65%;
-    opacity: 0.5;
-    background-color: #525252;
-    &:hover {
-        opacity: 1;
-    }
-}
-
-
-/* Red */
-
-.angular-bar {
-    width: 50%;
-    opacity: 0.5;
-    background-color: #d1831c;
-    &:hover {
-        opacity: 1;
-    }
-}
-
-
-/* Red */
-
-.scrum-bar {
-    width: 20%;
-    opacity: 0.5;
-    background-color: #d11caa;
-    &:hover {
-        opacity: 1;
-    }
-}
-
-.overlay {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.7);
-    transition: opacity 500ms;
-    visibility: visible;
-    opacity: 1;
-    z-index: 1;
-}
-
-.popup {
-    margin: 70px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 5px;
-    width: 30%;
-    position: relative;
-    transition: all 5s ease-in-out;
-}
-
-.popup h2 {
-    margin-top: 0;
-    color: #333;
-    font-family: Tahoma, Arial, sans-serif;
-}
-
-.popup .close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    transition: all 200ms;
-    font-size: 30px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #333;
-}
-
-.popup .close:hover {
-    color: #bb2f36;
-    cursor: pointer;
-}
-
-.popup .content-html {
-    max-height: 30%;
-    overflow: auto;
-}
-
-.popup .content-css {
-    max-height: 30%;
-    overflow: auto;
-}
-
-.popup .content-js {
-    max-height: 30%;
-    overflow: auto;
-}
-
-.popup .content-angular {
-    max-height: 30%;
-    overflow: auto;
-}
-
-@media screen and (max-width: 700px) {
-    .popup {
-        width: 70%;
-    }
-}
-
-.cv {
-    display: flex;
-    flex-direction: column;
-}
-
 .portfolio {
     display: flex;
     flex-direction: column;
@@ -279,6 +52,14 @@ h2 {
     align-items: center;
     margin-bottom: 64px;
     margin-top: 64px;
+    @media (max-width: 1000px) {
+        text-align: justify;
+        flex-direction: column;
+        h3 {
+            padding-top: 16px;
+            text-align: center;
+        }
+    }
 }
 
 .portfolio-laptop {
@@ -286,6 +67,9 @@ h2 {
     height: 100%;
     display: flex;
     justify-content: center;
+    @media (max-width: 1000px) {
+        width: 85%
+    }
     img {
         width: 100%;
     }
@@ -293,11 +77,18 @@ h2 {
 
 .portfolio-text {
     width: 35%;
+    @media (max-width: 1000px) {
+        width: 80%
+    }
 }
 
 .cta-section {
     display: flex;
     justify-content: space-evenly;
+    @media (max-width: 1000px) {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .mat-tab-group {
@@ -306,6 +97,8 @@ h2 {
 }
 
 .mat-raised-button {
+    margin-top: 8px;
+    margin-bottom: 8px;
     &:hover {
         filter: brightness(1.1);
     }

@@ -11,11 +11,12 @@ import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatMenuModule} from '@angular/material/menu';
 
 
 
 
-const MaterialComponents = [MatButtonModule, MatIconModule, MatTabsModule, MatToolbarModule, MatSidenavModule, MatExpansionModule, ReactiveFormsModule, MatCardModule, MatInputModule, MatRadioModule, MatSelectModule, MatDialogModule]
+const MaterialComponents = [MatButtonModule, MatMenuModule, MatIconModule, MatTabsModule, MatToolbarModule, MatSidenavModule, MatExpansionModule, ReactiveFormsModule, MatCardModule, MatInputModule, MatRadioModule, MatSelectModule, MatDialogModule]
 
 @NgModule({
   

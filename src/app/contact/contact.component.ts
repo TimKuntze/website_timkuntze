@@ -9,6 +9,7 @@ import {
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { DialogContactComponent } from '../dialog-contact/dialog-contact.component';
+import { NgForm } from '@angular/forms';
 
 
 @Component({
@@ -40,8 +41,17 @@ export class ContactComponent implements OnInit, AfterViewInit {
     private router: Router,
   ) {}
 
+  endpoint: string;
+  submitReport: string;
+  submitComplete = false;
+  resultColor: string;
+
   ngAfterViewInit(): void {}
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+    this.endpoint = "https://tim-kuntze.developerakademie.com/send_mail.php";
+
+  }
 
   /**
    * Send email with contact-form-data and reset form, if form is filled correctly
@@ -50,12 +60,15 @@ export class ContactComponent implements OnInit, AfterViewInit {
 
   // send email to server
 
+
+
   async sendMail() {
     try {
       const formData = new FormData();
       formData.append('name', this.addressForm.controls['name'].value);
-      formData.append('message', this.addressForm.controls['message'].value);
       formData.append('email', this.addressForm.controls['email'].value);
+      formData.append('message', this.addressForm.controls['message'].value);
+     
       
       let url = 'https://tim-kuntze.developerakademie.com/send_mail.php';
       let response = await fetch(url, {
@@ -72,11 +85,14 @@ export class ContactComponent implements OnInit, AfterViewInit {
       this.router.navigate(['/'])
       this.addressForm.reset();
     } catch (error) {
-      console.log("ERRORR!");
+      console.log("ERROR!");
       console.error(error);
       this.openDialog(false);
     }
   }
+
+
+
 
   openDialog(messageSent) {
     this.messageSent = messageSent;

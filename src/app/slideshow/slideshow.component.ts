@@ -32,19 +32,25 @@ export class SlideshowComponent implements OnInit {
     // Get the navbar
     var navbar = document.getElementById("navbar");
     var arrow = document.getElementById("arrow");
+    var navbarmobile = document.getElementById("navbar-mobile"); 
+    
+    
 
     // Get the offset position of the navbar
     var sticky = navbar.offsetTop;
+    var stickymobile = navbarmobile.offsetTop;
     var rotate = arrow.offsetTop;
 
     // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
     function myFunction() {
       if (window.pageYOffset > sticky) {
         navbar.classList.add("sticky");
+        navbarmobile.classList.add("sticky-mobile");
         arrow.classList.add("rotate");
       } else {
         navbar.classList.remove("sticky");
         arrow.classList.remove("rotate");
+        navbarmobile.classList.remove("sticky-mobile");
       }
 
     }

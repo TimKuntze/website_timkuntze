@@ -1,5 +1,9 @@
 .imprint {
     padding-left: 10%;
+    padding-right: 10%;
     padding-top: 236px;
-    padding-bottom: 5%;
+    padding-bottom: 10%;
+    @media (max-width: 570px) {
+        padding-top: 124px;
+    }
 }

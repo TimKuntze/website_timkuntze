@@ -11,6 +11,9 @@ header {
     justify-content: center;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.6);
+    @media (max-width: 570px) {
+        display: none;
+    }
     a {
         color: white;
         text-decoration: none;
@@ -49,6 +52,9 @@ header {
 .link-container {
     display: flex;
     padding-bottom: 28px;
+    @media (max-width: 570px) {
+        display: none;
+    }
 }
 
 .menue-link {
@@ -59,6 +65,9 @@ header {
     position: relative;
     margin-left: 24px;
     margin-right: 24px;
+    @media (max-width: 570px) {
+        font-size: 15px;
+    }
 }
 
 .home-link {
@@ -109,11 +118,18 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-left: 112px;
-    padding-right: 112px;
     text-align: center;
     border-bottom: 2px solid rgb(206, 86, 86);
     animation: fadeInAnimation 0.8s ease-in-out;
+    @media (max-width: 570px) {
+        display: none;
+    }
+}
+
+.sticky-mobile {
+    position: fixed;
+    top: 0px;
+    z-index: 99999999;
 }
 
 
@@ -121,4 +137,27 @@ header {
 
 .sticky+.content {
     padding-top: 60px;
+}
+
+.mobile-only {
+    display: none;
+    @media (max-width: 570px) {
+        display: flex;
+        top: 0;
+        position: absolute;
+        z-index: 99999999;
+        color: rgba(255, 255, 255, 1);
+        width: 100vw;
+        background-color: rgba(6, 10, 11, 0.9);
+        border-bottom: 2px solid rgb(206, 86, 86);
+    }
+}
+
+.material-icons {
+    font-size: 42px;
+    padding: 5px;
+}
+
+.mat-button {
+    border-radius: 0;
 }

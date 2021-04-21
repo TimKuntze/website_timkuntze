@@ -1,14 +1,9 @@
 <?php
 cors();
 ########### CONFIG ###############
-
-$recipient = 'timkuntze@gmx.de';
+$recipient = 'timkuntze@yahoo.com';
 $redirect = 'index.html';
-
 ########### CONFIG END ###########
-
-
-
 ########### Intruction ###########   
 #
 #   This script has been created to send an email to the $recipient
@@ -19,9 +14,6 @@ $redirect = 'index.html';
 #     [message] Message that should be send to you
 #
 ##################################
-
-
-
 ###############################
 #
 #        DON'T CHANGE ANYTHING FROM HERE!
@@ -29,7 +21,6 @@ $redirect = 'index.html';
 #        Ab hier nichts mehr ändern!
 #
 ###############################
-
 switch ($_SERVER['REQUEST_METHOD']) {
     case ("OPTIONS"): //Allow preflighting to take place.
         header("Access-Control-Allow-Origin: *");
@@ -38,7 +29,6 @@ switch ($_SERVER['REQUEST_METHOD']) {
         exit;
     case ("POST"): //Send the email;
         header("Access-Control-Allow-Origin: *");
-
         $subject = "Contact From " . $_POST['name'] ;
         $headers = "From:  noreply@tim-kuntze.developerakademie.com";
 
@@ -52,12 +42,8 @@ switch ($_SERVER['REQUEST_METHOD']) {
         header("Allow: POST", true, 405);
         exit;
 }
-
-
-
 function cors()
 {
-
     // Allow from any origin
     if (isset($_SERVER['HTTP_ORIGIN'])) {
         // Decide if the origin in $_SERVER['HTTP_ORIGIN'] is one
@@ -66,21 +52,14 @@ function cors()
         header('Access-Control-Allow-Credentials: true');
         header('Access-Control-Max-Age: 86400');    // cache for 1 day
     } 
-
-
     header("Access-Control-Allow-Origin: *");
-
-
     // Access-Control headers are received during OPTIONS requests
     if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
-
         if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_METHOD']))
             // may also be using PUT, PATCH, HEAD etc
             header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
-
         if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']))
             header("Access-Control-Allow-Headers: {$_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']}");
-
         exit(0);
     }
 }

@@ -48,6 +48,20 @@
         font-size: 42px;
         border-left: 8px solid rgb(206, 86, 86);
         margin-left: 120px;
+        @media (max-width: 850px) {
+            margin-left: 64px;
+        }
+        @media (max-width: 760px) {
+            height: 97px;
+            text-align: center;
+            line-height: 1.5em;
+            width: 280px;
+            font-size: 18px;
+            border-left: none;
+            border-bottom: 5px solid rgb(206, 86, 86);
+            padding-left: 0;
+            margin-left: 24px;
+        }
     }
 }
 
@@ -108,22 +122,6 @@
     text-transform: uppercase;
 }
 
-.typewriter h4 {
-    color: lightgray;
-    padding-left: 160px;
-    overflow: hidden;
-    /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid rgb(206, 86, 86);
-    /* The typwriter cursor */
-    white-space: nowrap;
-    /* Keeps the content on a single line */
-    margin: 0 auto;
-    /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em;
-    /* Adjust as needed */
-    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
-}
-
 
 /* The typing effect */
 
@@ -163,4 +161,22 @@
     letter-spacing: .15em;
     /* Adjust as needed */
     animation: typing 1s steps(50, end), blink-caret .50s step-end infinite;
+    @media (max-width: 850px) {
+        padding-left: 105px;
+    }
+    @media (max-width: 760px) {
+        padding-left: 0px;
+        font-size: 14px;
+        white-space: normal;
+    }
+}
+
+h4 {
+    @media (max-width: 760px) {
+        padding-left: 24px;
+        padding-right: 32px;
+        padding-top: 32px;
+        position: absolute;
+        top: 55vh;
+    }
 }
