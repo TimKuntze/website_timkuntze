@@ -85,7 +85,7 @@ export class ContactComponent implements OnInit, AfterViewInit {
       this.router.navigate(['/'])
       this.addressForm.reset();
     } catch (error) {
-      console.log("ERROR!");
+   
       console.error(error);
       this.openDialog(false);
     }
