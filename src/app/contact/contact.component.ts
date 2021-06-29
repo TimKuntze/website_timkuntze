@@ -70,7 +70,7 @@ export class ContactComponent implements OnInit, AfterViewInit {
       formData.append('message', this.addressForm.controls['message'].value);
      
       
-      let url = 'https://tim-kuntze.developerakademie.com/send_mail.php';
+      let url = 'http://tim-kuntze.developerakademie.com/send_mail.php';
       let response = await fetch(url, {
         method: 'POST', // *GET, POST, PUT, DELETE, etc.
         mode: 'cors', // no-cors, *cors, same-origin
@@ -82,7 +82,7 @@ export class ContactComponent implements OnInit, AfterViewInit {
       });
       console.log(response);
       this.openDialog(true);
-      this.router.navigate(['/'])
+      this.router.navigate([''])
       this.addressForm.reset();
     } catch (error) {
    

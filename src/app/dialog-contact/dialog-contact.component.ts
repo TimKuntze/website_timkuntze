@@ -20,7 +20,7 @@ export class DialogContactComponent implements OnInit {
       this.transmitConfirmation = 'Thank you, message sent!';
       this.icon = 'check-circle';
     } else {
-      this.transmitConfirmation = 'Sorry, something went wrong.';
+      this.transmitConfirmation = 'Sorry, something went wrong. Please contact me directly via timkuntze@gmx.de';
       this.icon = 'exclamation-triangle';
     }
   }

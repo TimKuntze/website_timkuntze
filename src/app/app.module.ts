@@ -45,7 +45,6 @@ import { StartScreenComponent } from './start-screen/start-screen.component';
     DataProtectionComponent,
     FooterComponent,
     ContactComponent,
-    DialogContactComponent,
     AboutMeComponent,
     StartScreenComponent,
   ],
