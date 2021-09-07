@@ -7,7 +7,7 @@
         <div class="aboutme">
 
             <p class="aboutme-text">Hi, I'm <b>Tim</b> from Berlin! After 10 years doing <b>Marketing</b> for <b>Amazon.de</b>, <b>ATOSS Software</b>, <b>shyftplan</b> and others, I started to learn to develop websites and apps in summer 2020. And yes, so much can be said about
-                Corona on the positive side: it really made one think about what you really want to do with your career! How I learned my skills in <b>HTML</b>, <b>CSS</b>, <b>"Vanilla" JavaScript</b> & <b>Angular</b>? I started a developer course with the Munich-based
+                Corona on the positive side: it really made one think about what you really want to do with your career! How I learned my skills in <b>HTML</b>, <b>CSS</b>, "vanilla" <b>JavaScript</b> & <b>Angular</b>? I started a developer course with the Munich-based
                 <b><a href="https://developerakademie.com/" target="_blank">Developer Akademie</a></b>, besides my full-time job as a Marketing Manager at shyftplan. And what can I say? It worked! Including a lot of ups and downs, help from my tutors,
                 not being afraid to ask a lot of questions and plain commitment.</p>
 
@@ -93,7 +93,7 @@
                                 </div>
                             </div>
 
-                            <span>TypeScript/Angular</span>
+                            <span>Angular</span>
                             <div (click)="popupangular = true" class="skill-container">
                                 <div class="skills angular-bar"></div>
                             </div>
@@ -103,7 +103,7 @@
                                     <h2>Angular</h2>
                                     <a class="close" (click)="popupangular = false">&times;</a>
                                     <div class="content-angular">
-                                        My first AngularJS project? You're looking at it, as I programmed it with Angular. Although it was not easy to go from plain JavaScript coding to Angular, because of some things that are different, I have to say that i makes programming much more effective
+                                        My first Angular project? You're looking at it, as I programmed it with Angular. Although it was not easy to go from vanilla JavaScript coding to Angular, I realized pretty quickly how much it makes programming much more effective
                                         and clear!
                                     </div>
                                 </div>
@@ -119,10 +119,26 @@
                                     <h2>Scrum</h2>
                                     <a class="close" (click)="popupscrum = false">&times;</a>
                                     <div class="content-scrum">
-                                        Scrum
+                                        Agile project management is a must. As I worked closely with Product Management before, I was already a bit familiar with this method. At Developer Akademie i finally learned what it means using it from the tech-spectrum.
                                     </div>
                                 </div>
                             </div>
+
+                            <span>Vue.js</span>
+                            <div (click)="popupvue = true" class="skill-container">
+                                <div class="skills vue-bar"></div>
+                            </div>
+
+                            <div class="overlay" *ngIf="popupvue">
+                                <div class="popup">
+                                    <h2>Vue.js</h2>
+                                    <a class="close" (click)="popupvue = false">&times;</a>
+                                    <div class="content-vue">
+                                        A honorable mention so to speak. I once tried myself on a small Vue.js project, in which I connected to an API of a movie database using Vue.js and Vuex. See portfolio in the tab "Other" for more info. 
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </mat-expansion-panel>
                 </mat-accordion>

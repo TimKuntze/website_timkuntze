@@ -13,6 +13,7 @@ export class AboutMeComponent implements OnInit {
   popupangular = false
   popupgithub = false
   popupscrum = false
+  popupvue = false
   constructor() { }
 
   ngOnInit(): void {

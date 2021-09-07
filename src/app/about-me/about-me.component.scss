@@ -135,9 +135,6 @@ h2 {
     }
 }
 
-
-/* Green */
-
 .css-bar {
     width: 85%;
     opacity: 0.5;
@@ -146,9 +143,6 @@ h2 {
         opacity: 1;
     }
 }
-
-
-/* Blue */
 
 .js-bar {
     width: 65%;
@@ -159,9 +153,6 @@ h2 {
     }
 }
 
-
-/* Red */
-
 .github-bar {
     width: 65%;
     opacity: 0.5;
@@ -170,9 +161,6 @@ h2 {
         opacity: 1;
     }
 }
-
-
-/* Red */
 
 .angular-bar {
     width: 50%;
@@ -183,13 +171,19 @@ h2 {
     }
 }
 
-
-/* Red */
-
 .scrum-bar {
     width: 20%;
     opacity: 0.5;
     background-color: #d11caa;
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.vue-bar {
+    width: 10%;
+    opacity: 0.5;
+    background-color: #32a77a;
     &:hover {
         opacity: 1;
     }
