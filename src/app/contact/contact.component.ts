@@ -5,6 +5,7 @@ import {
   FormGroup,
   FormBuilder,
   Validators,
+  FormGroupDirective,
 } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
@@ -62,7 +63,7 @@ export class ContactComponent implements OnInit, AfterViewInit {
 
 
 
-  async sendMail() {
+  async sendMail(form, formDirective) {
     try {
       const formData = new FormData();
       formData.append('name', this.addressForm.controls['name'].value);
@@ -82,7 +83,8 @@ export class ContactComponent implements OnInit, AfterViewInit {
       });
       console.log(response);
       this.openDialog(true);
-      this.router.navigate([''])
+      //this.router.navigate(['']); 
+      formDirective.resetForm(); 
       this.addressForm.reset();
     } catch (error) {
    

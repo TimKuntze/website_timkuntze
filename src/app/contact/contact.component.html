@@ -6,7 +6,7 @@
 
     <div class="contact-container">
 
-        <form #form [formGroup]="addressForm" #contactDirective="ngForm" (ngSubmit)="sendMail()">
+        <form #form [formGroup]="addressForm" #contactDirective="ngForm" (ngSubmit)="sendMail(addressForm, contactDirective)">
             <mat-card>
                 <mat-card-header>
 

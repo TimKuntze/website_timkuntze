@@ -90,7 +90,7 @@
     img {
         width: 60px;
         object-fit: contain;
-        animation: up-down 2.5s infinite ease-in-out;
+        animation: up-down 2.5s infinite alternate ease-in-out;
     }
 }
 
